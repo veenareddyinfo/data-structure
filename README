@@ -1,0 +1,69 @@
+Binary Search Tree for University Student Record Management
+
+📝 Overview
+This project implements a Binary Search Tree (BST) in the C programming language to efficiently manage student records in a university database. Each record is identified by a unique student ID, and the BST enables fast insertion, search, and deletion operations.
+
+🎯 Objective
+The primary goal of this project is to design a data structure that supports dynamic student data management with optimized performance. The BST was chosen due to its ability to maintain ordered data and provide average-case logarithmic time complexity for common operations.
+
+⚙️ Features
+Insert New Records: Adds a new student ID to the BST.
+
+Search Records: Locates a student record using its unique ID.
+
+Delete Records: Removes a student record while maintaining the BST structure.
+
+Modular Implementation: Code is organized for clarity and maintainability.
+
+🧑‍💻 Technologies Used
+Programming Language: C
+
+Data Structure: Binary Search Tree (BST)
+
+🔍 Time Complexity
+Operation	Average Case	Worst Case
+Insertion	O(log n)	O(n)
+Search	O(log n)	O(n)
+Deletion	O(log n)	O(n)
+
+In unbalanced trees, the performance may degrade. Self-balancing trees (like AVL or Red-Black Trees) are recommended for consistently better results.
+
+📌 Code Highlights
+c
+Copy
+Edit
+struct Node {
+    int id;
+    struct Node* left;
+    struct Node* right;
+};
+Insert Function: Recursively places new IDs while maintaining BST properties.
+
+Search Function: Efficiently locates a given student ID.
+
+Delete Function: Handles deletion for all node configurations (leaf, one child, two children).
+
+✅ Example
+
+struct Node* root = NULL;
+root = insert(root, 1001);
+root = insert(root, 1002);
+struct Node* found = search(root, 1001);
+root = deleteNode(root, 1002);
+📈 Results and Observations
+The BST ensures faster data access compared to linear data structures.
+
+Performance is highly dependent on the balance of the tree.
+
+Ideal for applications where ordered data needs frequent updates and retrieval.
+
+🔮 Future Enhancements
+Introduce AVL Tree or Red-Black Tree for self-balancing.
+
+Add support for additional student data (e.g., name, department).
+
+Implement file I/O for persistent data storage.
+
+📚 Conclusion
+This project demonstrates the use of a Binary Search Tree for efficient, scalable student record management. It highlights key operations and their implementation in C, serving as a foundational approach to more complex and balanced data structures in future development.
+
